@@ -2,10 +2,24 @@
 let ref_window;
 const btn_mostra_despertador = document.getElementById("btn_mostra_despertador");
 btn_mostra_despertador.onclick = function(){
-   ref_window = window.open("Despertador.html", "Despertador", "width=300,height=200","toolbar=no","scrollbars=no");
+   let altura = screen.availHeight/2;
+   let amplada = screen.availWidth/2;
+   let width_window = 300;
+   let height_window = 300;
+   ref_window = window.open("Despertador.html", "Despertador", "width="+width_window+"px,height="+height_window+"px,toolbar=no,scrollbars=no,top="
+    +(altura-height_window/2)+"px,left="+(amplada-width_window/2)+"px");
+
 }
 
 const btn_tanca_despertador = document.getElementById("btn_tanca_despertador");
 btn_tanca_despertador.onclick = function(){
     ref_window.close();
+}
+
+const btn_set_alarma = document.getElementById("btn_set_alarma");
+btn_set_alarma.onclick = function(){
+    let hora = document.getElementById("inp_hora").value;
+    let minut = document.getElementById("inp_minut").value;
+    let segons = document.getElementById("inp_segons").value;
+    ref_window.document.getElementById("div_hora_alarma").innerText = "Hora Alarma: "+hora+":"+minut+":"+segons;
 }
