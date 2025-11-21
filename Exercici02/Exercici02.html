@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Reproductor</title>
+  <script src="Exercici02.js" defer></script>
+</head>
+<body>
+    <h1>Reproductor audio</h1>
+    <button id="btn_mostra_info">Mostra Info</button>
+    <button id="btn_tanca_info">Tanca Info</button>
+    <br><br>
+    <section id="controls">
+      <label for="select_music">Selecciona audio:</label>
+      <select id="select_music"></select>
+      <div style="margin-top:8px;">
+        <button id="btn_play">Play</button>
+        <button id="btn_pause">Pause</button>
+        <button id="btn_stop">Stop</button>
+        <button id="btn_volume_down">-</button>
+        <button id="btn_volume_up">+</button>
+        <br><br>
+        <label for="inp_vol_audio">Volum:</label>
+        <input type="range" id="inp_vol_audio" min="0" max="1" step="0.01" value="1">
+      </div>
+      <audio id="audioElement"></audio>
+
+    </section>
+</body>
+</html>
+    
